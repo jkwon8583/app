@@ -13,6 +13,7 @@
 		1009138F1DD25C410050AE43 /* d214Pathways.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1009138D1DD25C410050AE43 /* d214Pathways.xcdatamodeld */; };
 		100913911DD25C410050AE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100913901DD25C410050AE43 /* Assets.xcassets */; };
 		100913941DD25C410050AE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100913921DD25C410050AE43 /* LaunchScreen.storyboard */; };
+		16E6BE269022B8667FC442E3 /* Pods_d214Pathways.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		100913901DD25C410050AE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		100913931DD25C410050AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		100913951DD25C410050AE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.release.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.release.xcconfig"; sourceTree = "<group>"; };
+		3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_d214Pathways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E6BE269022B8667FC442E3 /* Pods_d214Pathways.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				100913851DD25C400050AE43 /* d214Pathways */,
 				100913841DD25C400050AE43 /* Products */,
+				2F486B2CE591479E70931DF3 /* Pods */,
+				8DDD033AC6EE2BB4BE8F1373 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = d214Pathways;
 			sourceTree = "<group>";
 		};
+		2F486B2CE591479E70931DF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */,
+				2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DDD033AC6EE2BB4BE8F1373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 100913981DD25C410050AE43 /* Build configuration list for PBXNativeTarget "d214Pathways" */;
 			buildPhases = (
+				49777D08B220659245B42FC2 /* [CP] Check Pods Manifest.lock */,
 				1009137F1DD25C400050AE43 /* Sources */,
 				100913801DD25C400050AE43 /* Frameworks */,
 				100913811DD25C400050AE43 /* Resources */,
+				7294686EDAEB04B789A9D12B /* [CP] Embed Pods Frameworks */,
+				72CACA00FC7E275A7A6890DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49777D08B220659245B42FC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7294686EDAEB04B789A9D12B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72CACA00FC7E275A7A6890DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1009137F1DD25C400050AE43 /* Sources */ = {
@@ -253,6 +328,7 @@
 		};
 		100913991DD25C410050AE43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = d214Pathways/Info.plist;
@@ -264,6 +340,7 @@
 		};
 		1009139A1DD25C410050AE43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = d214Pathways/Info.plist;
@@ -292,6 +369,7 @@
 				1009139A1DD25C410050AE43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
