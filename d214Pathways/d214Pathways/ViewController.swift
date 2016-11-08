@@ -18,11 +18,17 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        
         
     }
 
-   
-}
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+    
+    }
 
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+    
+    }
+
+}
