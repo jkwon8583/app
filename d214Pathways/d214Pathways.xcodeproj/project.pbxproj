@@ -13,6 +13,8 @@
 		1009138F1DD25C410050AE43 /* d214Pathways.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1009138D1DD25C410050AE43 /* d214Pathways.xcdatamodeld */; };
 		100913911DD25C410050AE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100913901DD25C410050AE43 /* Assets.xcassets */; };
 		100913941DD25C410050AE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100913921DD25C410050AE43 /* LaunchScreen.storyboard */; };
+		103E47641DD3AF8800B4159A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E47631DD3AF8800B4159A /* Alamofire.framework */; };
+		103E47661DD3AF8C00B4159A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E47651DD3AF8C00B4159A /* SwiftyJSON.framework */; };
 		16E6BE269022B8667FC442E3 /* Pods_d214Pathways.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		100913901DD25C410050AE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		100913931DD25C410050AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		100913951DD25C410050AE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103E47631DD3AF8800B4159A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/d214Pathways-fobvwkynhejyvcehgecklbejmutu/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		103E47651DD3AF8C00B4159A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/d214Pathways-fobvwkynhejyvcehgecklbejmutu/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.release.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.release.xcconfig"; sourceTree = "<group>"; };
 		3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_d214Pathways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103E47661DD3AF8C00B4159A /* SwiftyJSON.framework in Frameworks */,
+				103E47641DD3AF8800B4159A /* Alamofire.framework in Frameworks */,
 				16E6BE269022B8667FC442E3 /* Pods_d214Pathways.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +92,8 @@
 		8DDD033AC6EE2BB4BE8F1373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				103E47651DD3AF8C00B4159A /* SwiftyJSON.framework */,
+				103E47631DD3AF8800B4159A /* Alamofire.framework */,
 				3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */,
 			);
 			name = Frameworks;
