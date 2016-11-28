@@ -13,7 +13,7 @@ import SwiftyJSON
 import Alamofire
 import SafariServices
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var tableView: UITableView!
@@ -37,16 +37,16 @@ class ViewController: UIViewController
                 for i in 0...(data.count - 1)
                 {
                     
-                    let information = (data[i]["data"])
+//                    let information = (data[i]["data"])
                     
                     pathwayName.append(String((data[i])["pathwayName"]))
                     
-                    for a in 0...(information.count-1)
-                    {
-                    
-                        //print((information[a])["name"])
-                    
-                    }
+//                    for a in 0...(information.count-1)
+//                    {
+//                    
+//                        print((information[a])["name"])
+//                    
+//                    }
                     
                 }
 
@@ -56,7 +56,7 @@ class ViewController: UIViewController
                 
             }
         
-        print(pathwayName)
+        //print(pathwayName)
         
     }
 
@@ -72,7 +72,7 @@ class ViewController: UIViewController
     
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
         
-        cell?.textLabel?.text = pathwayName[indexPath.row] as! String
+        cell?.textLabel?.text = pathwayName[indexPath.row]
         
         return cell!
         
@@ -81,8 +81,41 @@ class ViewController: UIViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
     
-        <#code#>
-    
+        let nvc = segue.destinationViewController as! SecondViewController
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let url = NSURL(string: "http://d214pathways.herokuapp.com/pathways")!
+        let request = NSURLRequest(URL: url)
+        var nameArray: [String]! = []
+        
+        do
+        {
+            
+            self.jsonData = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
+            var data = JSON(data: jsonData)
+            
+            let information = (data[(indexPath?.row)!]["data"])
+            
+            for i in 0...(information.count-1)
+            {
+                
+                nameArray.append(String((information[i])["name"]))
+//                nvc.classDescription.append(String((information[i])["description"]))
+//                nvc.id.append(String((information[i])["id"]))
+//                nvc.pathwayID.append(String((information[i])["pathway_id"]))
+//                nvc.number.append(String((information[i])["number"]))
+//                nvc.year.append(String((information[i])["year"]))
+                
+            }
+            
+            nvc.name = nameArray
+            
+        }
+        catch
+        {
+        
+        }
+        
     }
 
 }

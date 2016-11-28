@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ejo-lR-9yP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="xhZ-pv-so3">
@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="739.5" y="356.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="NQU-jT-FLg">
             <objects>
-                <viewController id="FFC-BQ-B7Z" sceneMemberID="viewController">
+                <viewController id="FFC-BQ-B7Z" customClass="SecondViewController" customModule="d214Pathways" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAN-fB-GYR"/>
                         <viewControllerLayoutGuide type="bottom" id="Zfr-xZ-YoT"/>
@@ -62,8 +62,31 @@
                     <view key="view" contentMode="scaleToFill" id="uw5-hc-M6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-BY-ZL4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="T1W-Zk-qMr">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="1"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1W-Zk-qMr" id="nJf-2O-mFJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FFC-BQ-B7Z" id="8Il-VH-RUS"/>
+                                    <outlet property="delegate" destination="FFC-BQ-B7Z" id="iFR-gJ-eW0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Muk-BY-ZL4" id="nLe-1d-hO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAX-ez-Lh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
