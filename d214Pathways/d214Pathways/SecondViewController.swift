@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
    
     @IBOutlet weak var tableView: UITableView!
@@ -23,8 +23,6 @@ class SecondViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        print(name)
         
     }
     
