@@ -32,6 +32,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
         
         cell?.textLabel?.text = name[indexPath.row]
+        cell?.detailTextLabel?.text = number[indexPath.row]
         
         return cell!
         
@@ -41,6 +42,22 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         
         return name.count
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+        let nvc = segue.destinationViewController as! ThirdViewController
+        let indexPath = tableView.indexPathForSelectedRow
+
+        nvc.name = name[indexPath!.row]
+        nvc.classDescription = classDescription[indexPath!.row]
+        nvc.id = id[indexPath!.row]
+        nvc.pathwayID = pathwayID[indexPath!.row]
+        nvc.number = number[indexPath!.row]
+        nvc.year = year[indexPath!.row]
+        
         
     }
 

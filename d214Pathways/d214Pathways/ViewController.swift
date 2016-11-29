@@ -37,16 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 for i in 0...(data.count - 1)
                 {
                     
-//                    let information = (data[i]["data"])
-                    
                     pathwayName.append(String((data[i])["pathwayName"]))
-                    
-//                    for a in 0...(information.count-1)
-//                    {
-//                    
-//                        print((information[a])["name"])
-//                    
-//                    }
                     
                 }
 
@@ -55,8 +46,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             {
                 
             }
-        
-        //print(pathwayName)
         
     }
 
@@ -87,6 +76,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let url = NSURL(string: "http://d214pathways.herokuapp.com/pathways")!
         let request = NSURLRequest(URL: url)
         var nameArray: [String]! = []
+        var classDescriptionArray: [String]! = []
+        var idArray: [String]! = []
+        var pathwayIDArray: [String]! = []
+        var numberArray: [String]! = []
+        var yearArray: [String]! = []
         
         do
         {
@@ -100,15 +94,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             {
                 
                 nameArray.append(String((information[i])["name"]))
-//                nvc.classDescription.append(String((information[i])["description"]))
-//                nvc.id.append(String((information[i])["id"]))
-//                nvc.pathwayID.append(String((information[i])["pathway_id"]))
-//                nvc.number.append(String((information[i])["number"]))
-//                nvc.year.append(String((information[i])["year"]))
+                classDescriptionArray.append(String((information[i])["description"]))
+                idArray.append(String((information[i])["id"]))
+                pathwayIDArray.append(String((information[i])["pathway_id"]))
+                numberArray.append(String((information[i])["number"]))
+                yearArray.append(String((information[i])["year"]))
                 
             }
             
             nvc.name = nameArray
+            nvc.classDescription = classDescriptionArray
+            nvc.id = idArray
+            nvc.pathwayID = pathwayIDArray
+            nvc.number = numberArray
+            nvc.year = yearArray
             
         }
         catch
