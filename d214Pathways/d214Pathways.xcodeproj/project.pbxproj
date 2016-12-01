@@ -13,6 +13,8 @@
 		1009138F1DD25C410050AE43 /* d214Pathways.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1009138D1DD25C410050AE43 /* d214Pathways.xcdatamodeld */; };
 		100913911DD25C410050AE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100913901DD25C410050AE43 /* Assets.xcassets */; };
 		100913941DD25C410050AE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100913921DD25C410050AE43 /* LaunchScreen.storyboard */; };
+		103E3A371DEF63C200BCE4F2 /* Classes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E3A361DEF63C200BCE4F2 /* Classes+CoreDataProperties.swift */; };
+		103E3A391DEF63C600BCE4F2 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E3A381DEF63C600BCE4F2 /* Classes.swift */; };
 		103E47641DD3AF8800B4159A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E47631DD3AF8800B4159A /* Alamofire.framework */; };
 		103E47661DD3AF8C00B4159A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E47651DD3AF8C00B4159A /* SwiftyJSON.framework */; };
 		104CB6DF1DEE0D07008B6010 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CB6DE1DEE0D07008B6010 /* ThirdViewController.swift */; };
@@ -29,6 +31,8 @@
 		100913901DD25C410050AE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		100913931DD25C410050AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		100913951DD25C410050AE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103E3A361DEF63C200BCE4F2 /* Classes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Classes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		103E3A381DEF63C600BCE4F2 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		103E47631DD3AF8800B4159A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/d214Pathways-fobvwkynhejyvcehgecklbejmutu/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		103E47651DD3AF8C00B4159A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/d214Pathways-fobvwkynhejyvcehgecklbejmutu/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		104CB6DE1DEE0D07008B6010 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		1009137A1DD25C400050AE43 = {
 			isa = PBXGroup;
 			children = (
+				103E3A361DEF63C200BCE4F2 /* Classes+CoreDataProperties.swift */,
+				103E3A381DEF63C600BCE4F2 /* Classes.swift */,
 				100913851DD25C400050AE43 /* d214Pathways */,
 				100913841DD25C400050AE43 /* Products */,
 				2F486B2CE591479E70931DF3 /* Pods */,
@@ -228,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1061B5A61DDF8A39000AC86F /* SecondViewController.swift in Sources */,
+				103E3A391DEF63C600BCE4F2 /* Classes.swift in Sources */,
 				100913891DD25C400050AE43 /* ViewController.swift in Sources */,
+				103E3A371DEF63C200BCE4F2 /* Classes+CoreDataProperties.swift in Sources */,
 				104CB6DF1DEE0D07008B6010 /* ThirdViewController.swift in Sources */,
 				100913871DD25C400050AE43 /* AppDelegate.swift in Sources */,
 				1009138F1DD25C410050AE43 /* d214Pathways.xcdatamodeld in Sources */,

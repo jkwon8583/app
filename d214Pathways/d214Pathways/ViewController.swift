@@ -12,6 +12,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import SafariServices
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
