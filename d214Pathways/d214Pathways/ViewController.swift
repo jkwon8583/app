@@ -71,6 +71,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
     
+        if segue.identifier == "scheduleSegue"
+        {
+        
+        }
+        else
+        {
+        
         let nvc = segue.destinationViewController as! SecondViewController
         let indexPath = tableView.indexPathForSelectedRow
         
@@ -114,6 +121,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         catch
         {
         
+        }
+            
         }
         
     }

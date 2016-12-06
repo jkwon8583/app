@@ -34,6 +34,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell?.textLabel?.text = name[indexPath.row]
         cell?.detailTextLabel?.text = number[indexPath.row]
+        cell?.textLabel?.textColor =  UIColor.blueColor()
         
         return cell!
         

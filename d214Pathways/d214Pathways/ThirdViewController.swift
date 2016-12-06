@@ -36,57 +36,16 @@ class ThirdViewController: UIViewController
         descriptionLabel.text = "Class Description: " + classDescription
         
     }
-    
-//    
-//    func fetchClasses()
-//    {
-//        
-//        let fetchRequest = NSFetchRequest(entityName: "Classes")
-//        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-//        
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//        
-//        do
-//        {
-//            
-//            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Classes]
-//            {
-//                
-//                classes = fetchResults
-//                
-//            }
-//            
-//        }
-//        catch
-//        {
-//            
-//        }
-//        
-//    }
 
     func saveNewClass(name: String, number: String, year: String, classDescriptions: String, id: String, pathwayID: String)
     {
-        
-//        let newClass =
+
         Classes.createInManagedObjectContext(self.managedObjectContext, name: name, number: number, year: year, classDescriptions: classDescriptions, id: id, pathwayID: pathwayID)
         
         save()
         
-//        self.fetchClasses()
-//        
-//        if let newClassIndex: Int! = classes.indexOf(newClass)
-//        {
-//            
-//            let newClassIndexPath = NSIndexPath(forRow: newClassIndex!, inSection: 0)
-//            
-//            tableView.insertRowsAtIndexPaths([newClassIndexPath], withRowAnimation: .Automatic)
-//            
-//            save()
-//            
-//        }
-        
     }
-    
+  
     func save()
     {
         
@@ -101,6 +60,15 @@ class ThirdViewController: UIViewController
             
         }
         
+    }
+
+    @IBAction func addButton(sender: UIButton)
+    {
+    
+        saveNewClass(name, number: number, year: year, classDescriptions: classDescription, id: id, pathwayID: pathwayID)
+        
+        performSegueWithIdentifier("scheduleSegue", sender: self)
+    
     }
 
 }
