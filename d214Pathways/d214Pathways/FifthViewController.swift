@@ -8,14 +8,13 @@
 
 import UIKit
 import SafariServices
-
+import ChameleonFramework
 class FifthViewController: UIViewController, SFSafariViewControllerDelegate
 {
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
     }
 
     @IBAction func webViewButton(sender: UIButton)

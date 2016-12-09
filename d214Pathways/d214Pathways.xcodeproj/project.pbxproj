@@ -21,6 +21,8 @@
 		104CB6DF1DEE0D07008B6010 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CB6DE1DEE0D07008B6010 /* ThirdViewController.swift */; };
 		1061B5A61DDF8A39000AC86F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1061B5A51DDF8A39000AC86F /* SecondViewController.swift */; };
 		10C749211DF5F3A6006ED69D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C749201DF5F3A6006ED69D /* FifthViewController.swift */; };
+		10D86D631DF89A8B00CCBE08 /* welcomelogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 10D86D621DF89A8B00CCBE08 /* welcomelogo.jpeg */; };
+		10D86D651DF89A9A00CCBE08 /* backgroundlogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 10D86D641DF89A9A00CCBE08 /* backgroundlogo.jpeg */; };
 		16E6BE269022B8667FC442E3 /* Pods_d214Pathways.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		104CB6DE1DEE0D07008B6010 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		1061B5A51DDF8A39000AC86F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		10C749201DF5F3A6006ED69D /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		10D86D621DF89A8B00CCBE08 /* welcomelogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcomelogo.jpeg; sourceTree = "<group>"; };
+		10D86D641DF89A9A00CCBE08 /* backgroundlogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundlogo.jpeg; sourceTree = "<group>"; };
 		2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.release.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.release.xcconfig"; sourceTree = "<group>"; };
 		3EDFC704CC5E653A62F62DD7 /* Pods_d214Pathways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_d214Pathways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-d214Pathways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-d214Pathways/Pods-d214Pathways.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				104CB6DE1DEE0D07008B6010 /* ThirdViewController.swift */,
 				1015E7571DF0B47D008E4EFF /* FourthViewController.swift */,
 				10C749201DF5F3A6006ED69D /* FifthViewController.swift */,
+				10D86D621DF89A8B00CCBE08 /* welcomelogo.jpeg */,
+				10D86D641DF89A9A00CCBE08 /* backgroundlogo.jpeg */,
 				100913901DD25C410050AE43 /* Assets.xcassets */,
 				100913921DD25C410050AE43 /* LaunchScreen.storyboard */,
 				100913951DD25C410050AE43 /* Info.plist */,
@@ -152,6 +158,7 @@
 				TargetAttributes = {
 					100913821DD25C400050AE43 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 872GT86F49;
 					};
 				};
 			};
@@ -179,8 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				100913941DD25C410050AE43 /* LaunchScreen.storyboard in Resources */,
+				10D86D631DF89A8B00CCBE08 /* welcomelogo.jpeg in Resources */,
 				100913911DD25C410050AE43 /* Assets.xcassets in Resources */,
 				1009138C1DD25C400050AE43 /* Main.storyboard in Resources */,
+				10D86D651DF89A9A00CCBE08 /* backgroundlogo.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,10 +372,13 @@
 			baseConfigurationReference = AA428ED891D6D118B7CF3E7D /* Pods-d214Pathways.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = d214Pathways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phs.d214Pathways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,10 +387,13 @@
 			baseConfigurationReference = 2C1BEC7A55AEBA070F5B168F /* Pods-d214Pathways.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = d214Pathways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phs.d214Pathways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

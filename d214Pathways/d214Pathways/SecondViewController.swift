@@ -23,10 +23,22 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad()
     {
+        view.backgroundColor = UIColor.flatSkyBlueColor()
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor.flatSkyBlueColor()
         
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
+        let color = UIColor.init(white: 0.0, alpha: 0.0)
+        
+        cell!.backgroundColor = color
+        
+    }
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
@@ -34,8 +46,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell?.textLabel?.text = name[indexPath.row]
         cell?.detailTextLabel?.text = number[indexPath.row]
-        cell?.textLabel?.textColor =  UIColor.blueColor()
-        
+        cell?.textLabel?.textColor =  UIColor.flatWhiteColor()
+        cell?.backgroundColor? = UIColor.flatSkyBlueColor()
         return cell!
         
     }

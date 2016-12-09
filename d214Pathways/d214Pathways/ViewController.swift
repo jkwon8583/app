@@ -13,6 +13,7 @@ import SwiftyJSON
 import Alamofire
 import SafariServices
 import CoreData
+import ChameleonFramework
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
@@ -25,20 +26,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        tableView.backgroundColor = UIColor.flatSkyBlueColor()
         let url = NSURL(string: "http://d214pathways.herokuapp.com/pathways")!
         let request = NSURLRequest(URL: url)
-
             do
             {
                 
                 self.jsonData = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
                 var data = JSON(data: jsonData)
                 
+                print(data)
+                
                 for i in 0...(data.count - 1)
                 {
                     
-                    pathwayName.append(String((data[i])["pathwayName"]))
+                   pathwayName.append(String((data[i])["pathwayName"]))
                     
                 }
 
@@ -56,13 +58,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return pathwayName.count
         
     }
-
+    
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
+//    {
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
+//        let color = UIColor.init(white: 0.0, alpha: 0.0)
+//        
+//        
+//        
+//    
+//    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
     
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
         
         cell?.textLabel?.text = pathwayName[indexPath.row]
+        cell?.textLabel?.textColor = UIColor.flatWhiteColor()
+        cell?.backgroundColor? = UIColor.flatSkyBlueColor()
         
         return cell!
         
@@ -96,9 +111,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.jsonData = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
             var data = JSON(data: jsonData)
             
-            let information = (data[(indexPath?.row)!]["data"])
+            let information = (data[(indexPath?.row)!]["classes"])
             
-            for i in 0...(information.count-1)
+            for i in 0...(information.count - 1)
             {
                 
                 nameArray.append(String((information[i])["name"]))

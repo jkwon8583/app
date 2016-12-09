@@ -7,5 +7,6 @@ target 'd214Pathways' do
 
   pod 'SwiftyJSON'
   pod 'Alamofire', '3.5.0'
+  pod 'ChameleonFramework'
 
 end

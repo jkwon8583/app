@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-d214Pathways.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>055137B53C5051DCB6799E04552A6479</key>
+		<key>1A3B93EFC04A5B916C687CEE5406CAD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9BB74B816A96BAF85E80AC9BC624ED6</key>
+		<key>9B57F4EE4746045CEAE2D933A3C8EC9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAA640DCB69A01534A9C1227B5EA7F2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

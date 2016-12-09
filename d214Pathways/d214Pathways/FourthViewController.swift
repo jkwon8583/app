@@ -20,6 +20,8 @@ class FourthViewController: UIViewController, UITabBarDelegate, UITableViewDataS
     
     override func viewDidLoad()
     {
+       tableView.backgroundColor = UIColor.flatSkyBlueColor()
+        self.view.backgroundColor = UIColor.flatSkyBlueColor()
         super.viewDidLoad()
 
         fetchClasses()
@@ -32,7 +34,8 @@ class FourthViewController: UIViewController, UITabBarDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell")
         
         cell?.textLabel?.text = classes[indexPath.row].name
-        
+        cell?.textLabel?.textColor =  UIColor.flatWhiteColor()
+        cell?.backgroundColor? = UIColor.flatSkyBlueColor()
         return cell!
         
     }
